@@ -1,0 +1,48 @@
+{
+  "name": "wisdom-serve",
+  "version": "0.0.2",
+  "description": "node 服务",
+  "main": "src/serve/index.ts",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "ts-node-dev main.ts",
+    "build": "ts-node build/build.ts --trace-warnings"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "src/*"
+  ],
+  "types": "./global.d.ts",
+  "dependencies": {
+    "@keyvhq/core": "^2.0.0",
+    "@keyvhq/mysql": "^2.0.1",
+    "@types/lodash": "^4.14.181",
+    "@types/mysql": "^2.15.21",
+    "@types/node": "^17.0.24",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "@wisdom-serve/core-plug": "workspaces:*",
+    "@wisdom-serve/serve": "workspaces:*",
+    "@wisdom-serve/utils": "workspaces:*",
+    "eslint": "^8.13.0",
+    "eslint-plugin-react": "^7.29.4",
+    "fast-glob": "^3.2.11",
+    "javascript-obfuscator": "^4.0.0",
+    "lodash": "^4.17.21",
+    "mysql": "^2.18.1",
+    "ncol": "^0.0.7",
+    "node-watch": "^0.7.3",
+    "nodemailer": "^6.8.0",
+    "openai": "^3.1.0",
+    "ts-node": "^10.7.0",
+    "ts-node-build": "^0.1.2",
+    "typescript": "^4.9.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "axios": "^1.3.4",
+    "puppeteer": "^19.8.2"
+  }
+}

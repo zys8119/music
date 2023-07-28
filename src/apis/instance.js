@@ -9,7 +9,8 @@ const instance = axios.create({
     validateStatus: status => {
         return status >= 200 && status < 300; // default
     },
-    baseURL: 'https://api.trtst.com/'
+    // baseURL: 'https://api.trtst.com/'
+    baseURL: 'http://127.0.0.1:81'
 });
 
 // 添加请求拦截器
