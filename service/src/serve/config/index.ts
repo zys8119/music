@@ -15,5 +15,6 @@ export default <Partial<AppServeOptions>>{
         prefix:""
     },
     cors:true,
+    credentials:true,
     mysqlAuto:false
 }

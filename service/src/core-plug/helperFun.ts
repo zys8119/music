@@ -48,7 +48,7 @@ const helperFun:Plugin = function (request, response, next){
         }
         response.end(code === "send" ? data : JSON.stringify({
             code:options.code || code,
-            data:options.data || data,
+            [options.dataField || 'data']:options.data || data,
             message:options.message || "请求成功",
         }))
     }
@@ -76,6 +76,7 @@ export default helperFun
 
 type Options = {
     data:any
+    dataField:string
     code:number
     message:string
     statusCode:number

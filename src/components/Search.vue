@@ -58,7 +58,7 @@ import { defineComponent, getCurrentInstance, onMounted, reactive, toRefs } from
 import { useRoute, useRouter } from 'vue-router';
 
 export default defineComponent({
-    
+
     setup() {
         const { proxy } = getCurrentInstance();
         const route = useRoute();
@@ -82,7 +82,7 @@ export default defineComponent({
             if (info['keyVal']) {
                 info['loading'] = true;
                 info['suggestInfo'] = [];
-                
+
                 getSerachSuggest();
             }
         };
@@ -93,7 +93,7 @@ export default defineComponent({
             if (info['keyVal']) {
                 info['loading'] = true;
                 info['suggestInfo'] = [];
-                
+
                 getSerachSuggest();
             }
         };
@@ -101,7 +101,6 @@ export default defineComponent({
         // 热门搜索
         const getSearchHot = async() => {
             const { data: res } = await proxy.$http.serachHot()
-
             if (res.code !== 200) {
                 return proxy.$msg.error('数据请求失败')
             }
